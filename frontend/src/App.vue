@@ -1,6 +1,8 @@
 <template>
+
   <div id="app">
     <head>
+      <title>Weeds Detection System </title>
       <!-- Other head elements -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     </head>

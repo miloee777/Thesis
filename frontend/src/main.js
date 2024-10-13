@@ -35,7 +35,7 @@ const routes = [
     component: YaKhaoNokInfo },
 
  {  path: '/phak-pod-na-info', 
-    name: 'PhakPodNaInfo', 
+    name: 'phak-pod-na-info', 
     component: PhakPodNaInfo },
 ]
 

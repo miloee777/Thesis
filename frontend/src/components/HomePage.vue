@@ -226,6 +226,21 @@ h5 {
   text-align: center;
 }
 
+h5 a {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #6a9c46; /* สีเขียว */
+  color: white;
+  border-radius: 10px;
+  text-decoration: none; /* เอาขีดเส้นใต้ของลิงก์ออก */
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+h5 a:hover {
+  background-color: #5a8c36; /* สีเมื่อ hover */
+}
+
 p {
   font-size: 1.5em;
   line-height: 1.5;
