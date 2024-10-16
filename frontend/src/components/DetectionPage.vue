@@ -7,7 +7,7 @@
       <!-- ปุ่มสำหรับอัปโหลดและเปิดกล้อง -->
       <!-- ปุ่มสำหรับอัปโหลดและเปิด/ปิดกล้อง -->
       <div class="button-group">
-        <button class="btn-detect" @click="submitImage">Detect</button>
+        <button class="btn-detect" @click="submitImage">ตรวจจับ</button>
         <button class="btn-detect-cam" @click="toggleCamera">
           {{ cameraOpened ? 'ปิดกล้อง' : 'เปิดกล้อง' }}
         </button>
@@ -34,9 +34,9 @@
         </div>
 
         <div class="detected-classes" v-if="predictions.length > 0">
-          <h3>Detected Classes: </h3>
+          <h3>วัชพืชที่ถูกตรวจพบ (% ค่าความมั่นใจ): </h3>
           <ul>
-            <li v-for="(box, index) in predictions" :key="index">
+            <li v-for="(box, index) in predictions" :key="index" :class="box.class">
               <router-link :to="getClassLink(box.class).name">
                 {{ getClassLink(box.class).displayName }} ({{ (box.confidence * 100).toFixed(2) }}%)
               </router-link>
@@ -387,7 +387,9 @@ img {
   color: #333;
   margin-bottom: 10px;
 }
-
+h3{
+  color: rgb(82, 9, 9);
+}
 h5 {
   text-align: center;
   width: 100%;
@@ -404,6 +406,67 @@ h5 {
   margin-top: 15px;
   color: rgb(136, 3, 3);
   font-size: 16px;
+}
+
+
+.detected-classes a {
+  text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+  color: white; /* เปลี่ยนสีเป็นสีขาวเพื่อให้กลมกลืนกับพื้นหลัง */
+}
+.detected-classes li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.detected-classes li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.detected-classes a:hover {
+  color: white; /* ทำให้สีคงที่เมื่อเมาส์ชี้ */
+}
+
+.nuad-pla-duk {
+  background-color: #067a25; /* สีเขียว */
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  margin: 7px;
+}
+
+.ya-kok-sai {
+  background-color: #b87a08; /* สีส้มอ่อน */
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  margin: 7px;
+}
+
+.ya-khao-nok {
+  background-color: #0252a7; /* สีฟ้า */
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  margin: 7px;
+}
+
+.phak-pod-na {
+  background-color: #ad095b; /* สีชมพู */
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  margin: 7px;
 }
 
 @media (max-width: 600px) {
@@ -423,4 +486,5 @@ h5 {
     max-width: 100%;
   }
 }
+
 </style>
