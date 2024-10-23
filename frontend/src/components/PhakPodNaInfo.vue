@@ -1,7 +1,7 @@
 <template>
   <div class="content-container">
     <nav class="navbar">
-      <router-link to="/" class="home-button">HOME</router-link>
+      <router-link to="/" class="home-button">หน้าแรก</router-link>
     </nav>
 
     <h1 class="title">ผักปอดนา</h1>

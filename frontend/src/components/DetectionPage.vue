@@ -242,7 +242,7 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-image: url('D:\Detection-app\frontend\src\assets\nature_bg.jpg');
+  background-image: url('C:\Thesis\frontend\src\assets\nature_bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

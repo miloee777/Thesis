@@ -31,6 +31,9 @@ def detect():
     if response.status_code != 200:
         return jsonify({'error': 'Detection failed'}), response.status_code
     
+
+
+    
     result = response.json()
 
     
@@ -59,3 +62,5 @@ def detect():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    #update

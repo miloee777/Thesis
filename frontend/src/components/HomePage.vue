@@ -13,10 +13,10 @@
         <!-- Navigation Menu -->
         <nav :class="{ 'nav': true, 'nav-open': isMenuOpen }">
           <ul>
-            <li><router-link to="/" exact-active-class="active-link">Home</router-link></li>
-            <li><router-link to="/about">About Us</router-link></li>
-            <li><router-link to="/contact">Contact Us</router-link></li>
-            <li><router-link to="/product">FeedBack</router-link></li>
+            <li><router-link to="/" exact-active-class="active-link">หน้าแรก</router-link></li>
+            <li><router-link to="/about">เกี่ยวกับเรา</router-link></li>
+            <li><router-link to="/contact">ติดต่อเรา</router-link></li>
+            <li><router-link to="/product">ข้อเสนอแนะ</router-link></li>
           </ul>
         </nav>
       </header>
